@@ -90,8 +90,8 @@
         <div class="segment">
             <label for="FutureIncrease">Will this increase in the future?:</label>
             <select name="FutureIncrease" id="FutureIncrease" required onchange="toggleFutureQuestions()">
-                <option value="Yes">Yes</option>
                 <option value="No">No</option>
+                <option value="Yes">Yes</option>
             </select>
         </div>
         
@@ -195,7 +195,7 @@
                 <div class="result-item">Estimated pot at retirement: £${simplefuturePot.toLocaleString(undefined, {maximumFractionDigits: 0})}</div>
                 <div class="result-item">Estimated monthly pension: £${estimatedMonthlyPension.toLocaleString(undefined, {maximumFractionDigits: 0})}</div>
                 <div class="result-item">Future Annual contributions: £${futureannualContribution.toLocaleString(undefined, {maximumFractionDigits: 0})}</div>
-                <div class="result-item">Estimated pot at retirement with additional future saving: £${futurePot.toLocaleString(undefined, {maximumFractionDigits: 0})}</div>
+                <div class="result-item">Estimated pot at retirement with additional future saving: £${furtherfuturePot.toLocaleString(undefined, {maximumFractionDigits: 0})}</div>
                 <div class="result-item">Estimated monthly pension with additional future saving: £${furtherestimatedMonthlyPension.toLocaleString(undefined, {maximumFractionDigits: 0})}</div>
             `;
 
