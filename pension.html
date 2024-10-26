@@ -113,22 +113,17 @@
 
             // Calculate projections
             const yearsToRetirement = retirementAge - currentAge;
-            const annualContribution = salary * (employeeContribution + employerContribution);
+            const totalAnnualContribution = salary * (employeeContribution + employerContribution);
             const assumedGrowthRate = 0.02; // 2% annual growth
             const contributionGrowthRate = 0.015; // 2% annual growth
 
-            // Calculate annual contribution increase
-            let yearlyannualContribution = annualContribution;
-            for (let i = 0; i < yearsToRetirement; i++) {
-                yearlyannualContribution = (yearlyannualContribution * (1 + contributionGrowthRate));
-            }
-            
-            // Calculate future pot with compound interest
             let futurePot = currentPot;
+            let annualContribution = totalAnnualContribution;
             for (let i = 0; i < yearsToRetirement; i++) {
-                annualContribution = annualContribution * (1 + contributionGrowthRate)
-                futurePot = ((futurePot + annualContribution) * (1 + assumedGrowthRate))*(1 - PensionCharge);
-            }
+                annualContribution *= (1 + contributionGrowthRate);
+                futurePot = ((futurePot + annualContribution) * (1 + assumedGrowthRate)) * (1 - PensionCharge);
+                }
+
 
             // Calculate estimated monthly pension
             const estimatedAnnualPension = futurePot * 0.04; // Using 4% withdrawal rate
