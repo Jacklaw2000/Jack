@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pension Calculator</title>
     <style>
         .segment {
             margin-bottom: 20px;
         }
         
-        /* Make form elements stack vertically */
         select, input {
             display: block;
             margin-top: 5px;
@@ -21,47 +20,122 @@
             display: block;
             margin-bottom: 5px;
         }
+
+        #results {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+        }
+
+        .result-item {
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
     <h1>Pension Calculator</h1>
-    <div class="segment">
-        <label for="Gender">Choose a gender:</label>
-        <select name="Gender" id="Gender">
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-        </select>
+    <form id="pensionForm" onsubmit="calculatePension(event)">
+        <div class="segment">
+            <label for="Gender">Choose a gender:</label>
+            <select name="Gender" id="Gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+        </div>
+
+        <div class="segment">
+            <label for="Birth">Birth date:</label>
+            <input type="date" id="Birth" name="Birth" value="2000-01-01" min="1900-01-01" max="2050-12-31" required/>
+        </div>
+
+        <div class="segment">
+            <label for="AgeToRetire">Age to Retire (between 57 and 100):</label>
+            <input type="number" id="AgeToRetire" name="Age" min="57" max="100" required>
+        </div>
+
+        <div class="segment">
+            <label for="CurrentPensionPot">Current Pension Pot (£):</label>
+            <input type="number" id="CurrentPensionPot" name="CurrentPensionPot" min="0" required>
+        </div>
+
+        <div class="segment">
+            <label for="CurrentSalary">Current Salary (£):</label>
+            <input type="number" id="CurrentSalary" name="CurrentSalary" min="0" required>
+        </div>
+
+        <div class="segment">
+            <label for="EmployeeContribution">How much do you contribute to your pension? (%):</label>
+            <input type="number" id="EmployeeContribution" name="EmployeeContribution" min="0" max="100" required>
+        </div>
+
+        <div class="segment">
+            <label for="EmployerContribution">How much does your employer contribute to your pension? (%):</label>
+            <input type="number" id="EmployerContribution" name="EmployerContribution" min="0" max="100" required>
+        </div>
+
+        <button type="submit">Calculate Pension</button>
+    </form>
+
+    <div id="results" style="display: none;">
+        <h2>Your Pension Projection</h2>
+        <div id="projectionResults"></div>
     </div>
 
-    <div class="segment">
-        <label for="Birth">Birth date:</label>
-        <input type="date" id="Birth" name="Birth" value="2000-01-01" min="1900-01-01" max="2050-12-31" />
-    </div>
+    <script>
+        function calculatePension(event) {
+            event.preventDefault();
+            
+            // Get input values
+            const birthDate = new Date(document.getElementById('Birth').value);
+            const currentAge = new Date().getFullYear() - birthDate.getFullYear();
+            const retirementAge = parseInt(document.getElementById('AgeToRetire').value);
+            const currentPot = parseFloat(document.getElementById('CurrentPensionPot').value);
+            const salary = parseFloat(document.getElementById('CurrentSalary').value);
+            const employeeContribution = parseFloat(document.getElementById('EmployeeContribution').value) / 100;
+            const employerContribution = parseFloat(document.getElementById('EmployerContribution').value) / 100;
 
-    <div class="segment">
-        <label for="Age to Retire">Age to Retire (between 57 and 100):</label>
-        <input type="number" id="Age to Retire" name="Age" min="57" max="100">
-    </div>
+            // Calculate projections
+            const yearsToRetirement = retirementAge - currentAge;
+            const annualContribution = salary * (employeeContribution + employerContribution);
+            const assumedGrowthRate = 0.05; // 5% annual growth
 
-    <div class="segment">
-        <label for="Current Pension Pot">Current Pension Pot (£):</label>
-        <input type="number" id="Current Pension Pot" name="Current Pension Pot" min="0">
-    </div>
+            // Calculate future pot with compound interest
+            let futurePot = currentPot;
+            for (let i = 0; i < yearsToRetirement; i++) {
+                futurePot = (futurePot + annualContribution) * (1 + assumedGrowthRate);
+            }
 
-    <div class="segment">
-        <label for="Current Salary">Current Salary (£):</label>
-        <input type="number" id="Current Salary" name="Current Salary" min="0">
-    </div>
+            // Calculate estimated monthly pension
+            const estimatedAnnualPension = futurePot * 0.04; // Using 4% withdrawal rate
+            const estimatedMonthlyPension = estimatedAnnualPension / 12;
 
-    <div class="segment">
-        <label for="Employee Contribution">How much do you contribute to your pension? (%):</label>
-        <input type="number" id="Employee Contribution" name="Employee Contribution" min="0">
-    </div>
-
-    <div class="segment">
-        <label for="Employer Contribution">How much does your employer contribute to your pension? (%):</label>
-        <input type="number" id="Employer Contribution" name="Employer Contribution" min="0">
-    </div>
-    
+            // Display results
+            const results = document.getElementById('results');
+            const projectionResults = document.getElementById('projectionResults');
+            
+            projectionResults.innerHTML = `
+                <div class="result-item">Years until retirement: ${yearsToRetirement}</div>
+                <div class="result-item">Annual contributions: £${annualContribution.toLocaleString(undefined, {maximumFractionDigits: 0})}</div>
+                <div class="result-item">Estimated pot at retirement: £${futurePot.toLocaleString(undefined, {maximumFractionDigits: 0})}</div>
+                <div class="result-item">Estimated monthly pension: £${estimatedMonthlyPension.toLocaleString(undefined, {maximumFractionDigits: 0})}</div>
+            `;
+            
+            results.style.display = 'block';
+        }
+    </script>
 </body>
 </html>
