@@ -117,6 +117,12 @@
             const assumedGrowthRate = 0.02; // 2% annual growth
             const contributionGrowthRate = 0.015; // 2% annual growth
 
+            // Calculate annual contribution increase
+            let yearlyannualContribution = annualContribution;
+            for (let i = 0; i < yearsToRetirement; i++) {
+                yearlyannualContribution = (yearlyannualContribution * (1 + contributionGrowthRate));
+            }
+            
             // Calculate future pot with compound interest
             let futurePot = currentPot;
             for (let i = 0; i < yearsToRetirement; i++) {
