@@ -150,6 +150,7 @@
             const futuresalary = parseFloat(document.getElementById('FutureSalary').value);
             const futureemployeeContribution = parseFloat(document.getElementById('FutureEmployeeContribution').value) / 100;
             const futureemployerContribution = parseFloat(document.getElementById('FutureEmployerContribution').value) / 100;
+            const FutureIncrease = document.getElementById('FutureIncrease').value;
 
             //Pension Charges
             const PensionCharge = 0.0052
@@ -228,12 +229,17 @@
                 <div class="result-item">Annual contributions: £${annualContribution.toLocaleString(undefined, {maximumFractionDigits: 0})}</div>
                 <div class="result-item">Estimated pot at retirement: £${simplefuturePot.toLocaleString(undefined, {maximumFractionDigits: 0})}</div>
                 <div class="result-item">Estimated yearly pension: £${estimatedAnnualPension.toLocaleString(undefined, {maximumFractionDigits: 0})}</div>
-                <div class="result-item">Future Annual contributions: £${futureannualContribution.toLocaleString(undefined, {maximumFractionDigits: 0})}</div>
-                <div class="result-item">Estimated pot at retirement with additional future saving: £${furtherfuturePot.toLocaleString(undefined, {maximumFractionDigits: 0})}</div>
-                <div class="result-item">Estimated yearly pension with additional future saving: £${furtherestimatedAnnualPension.toLocaleString(undefined, {maximumFractionDigits: 0})}</div>
                 <div class="result-item">Estimated yearly pension (CPI-linked annuity): £${simpleestimatedCpiAnnualPension.toLocaleString(undefined, {maximumFractionDigits: 0})}</div>
-                <div class="result-item">Estimated yearly pension with additional future saving (CPI-linked annuity): £${estimatedCpiAnnualPension.toLocaleString(undefined, {maximumFractionDigits: 0})}</div>
-            `;
+
+                `;
+                
+            // Only include future income projections if "Will this increase in the future?" is set to "Yes"
+                if (FutureIncrease === "Yes") { resultsHTML += `
+                    <div class="result-item">Future Annual contributions: £${futureannualContribution.toLocaleString(undefined, {maximumFractionDigits: 0})}</div>
+                    <div class="result-item">Estimated pot at retirement with additional future saving: £${furtherfuturePot.toLocaleString(undefined, {maximumFractionDigits: 0})}</div>
+                    <div class="result-item">Estimated yearly pension with additional future saving: £${furtherestimatedAnnualPension.toLocaleString(undefined, {maximumFractionDigits: 0})}</div>
+                    <div class="result-item">Estimated yearly pension with additional future saving (CPI-linked annuity): £${estimatedCpiAnnualPension.toLocaleString(undefined, {maximumFractionDigits: 0})}</div>
+                `;
 
             results.style.display = 'block';
         }
