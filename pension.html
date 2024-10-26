@@ -144,24 +144,46 @@
             const salary = parseFloat(document.getElementById('CurrentSalary').value);
             const employeeContribution = parseFloat(document.getElementById('EmployeeContribution').value) / 100;
             const employerContribution = parseFloat(document.getElementById('EmployerContribution').value) / 100;
+            const initialContributionTime = parseFloat(document.getElementById('CurrentContribution').value);
+            const futuresalary = parseFloat(document.getElementById('FutureSalary').value);
+            const futureemployeeContribution = parseFloat(document.getElementById('FutureEmployeeContribution').value) / 100;
+            const futureemployerContribution = parseFloat(document.getElementById('FutureEmployerContribution').value) / 100;
 
             //Pension Charges
             const PensionCharge = 0.0052
 
             // Calculate projections
             const yearsToRetirement = retirementAge - currentAge;
+            const yearsToRetirementafterinitial = retirementAge - currentAge - initialContributionTime;
             const annualContribution = salary * (employeeContribution + employerContribution);
+            const futureannualContribution = futuresalary * (futureemployeeContribution + futureemployerContribution);
             const assumedGrowthRate = 0.02; // 2% annual growth
             
             // Calculate future pot with compound interest
             let futurePot = currentPot;
-            for (let i = 0; i < yearsToRetirement; i++) {
+            for (let i = 0; i < initialContributionTime; i++) {
                 futurePot = ((futurePot + annualContribution) * (1 + assumedGrowthRate))*(1 - PensionCharge);
             }
 
-            // Calculate estimated monthly pension
-            const estimatedAnnualPension = futurePot * 0.04; // Using 4% withdrawal rate
+            // Calculate further future pot with compound interest
+            let furtherfuturePot = futurePot;
+            for (let i = 0; i < yearsToRetirementafterinitial; i++) {
+                furtherfuturePot = ((furtherfuturePot + futureannualContribution) * (1 + assumedGrowthRate))*(1 - PensionCharge);
+            }
+
+            // Calculate simple future pot with compound interest
+            let simplefuturePot = currentPot;
+            for (let i = 0; i < yearsToRetirement; i++) {
+                simplefuturePot = ((simplefuturePot + annualContribution) * (1 + assumedGrowthRate))*(1 - PensionCharge);
+            }
+
+            // Calculate simple estimated monthly pension
+            const estimatedAnnualPension = simplefuturePot * 0.04; // Using 4% withdrawal rate
             const estimatedMonthlyPension = estimatedAnnualPension / 12;
+
+            // Calculate further estimated monthly pension
+            const furtherestimatedAnnualPension = futurePot * 0.04; // Using 4% withdrawal rate
+            const furtherestimatedMonthlyPension = furtherestimatedAnnualPension / 12;
 
             // Display results
             const results = document.getElementById('results');
@@ -170,8 +192,11 @@
             projectionResults.innerHTML = `
                 <div class="result-item">Years until retirement: ${yearsToRetirement}</div>
                 <div class="result-item">Annual contributions: £${annualContribution.toLocaleString(undefined, {maximumFractionDigits: 0})}</div>
-                <div class="result-item">Estimated pot at retirement: £${futurePot.toLocaleString(undefined, {maximumFractionDigits: 0})}</div>
+                <div class="result-item">Estimated pot at retirement: £${simplefuturePot.toLocaleString(undefined, {maximumFractionDigits: 0})}</div>
                 <div class="result-item">Estimated monthly pension: £${estimatedMonthlyPension.toLocaleString(undefined, {maximumFractionDigits: 0})}</div>
+                <div class="result-item">Future Annual contributions: £${futureannualContribution.toLocaleString(undefined, {maximumFractionDigits: 0})}</div>
+                <div class="result-item">Estimated pot at retirement with additional future saving: £${futurePot.toLocaleString(undefined, {maximumFractionDigits: 0})}</div>
+                <div class="result-item">Estimated monthly pension with additional future saving: £${furtherestimatedMonthlyPension.toLocaleString(undefined, {maximumFractionDigits: 0})}</div>
             `;
 
             results.style.display = 'block';
