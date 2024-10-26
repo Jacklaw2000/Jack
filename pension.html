@@ -203,6 +203,22 @@
             }
             const estimatedCpiAnnualPension = cpiAnnuityIncome / lifeExpectancyYears;
 
+            // Parameters for simple CPI-linked annuity calculation
+            const simplelifeExpectancyYears = Gender - retirementAge; // Adjust based on desired payout period
+            const simplecpiRate = 0.02; // Assume 2% CPI inflation
+            let simplecpiAnnuityIncome = 0;
+            let simplecpiAnnuityPot = simplefuturePot;
+            const simpleinitialWithdrawalRate = 0.04;
+        
+            // Calculate CPI-tracked annuity
+            for (let simpleyear = 1; simpleyear <= simplelifeExpectancyYears; simpleyear++) {
+                let simpleannualWithdrawal = simplecpiAnnuityPot * simpleinitialWithdrawalRate * Math.pow(1 + simplecpiRate, simpleyear - 1);
+                simplecpiAnnuityPot -= simpleannualWithdrawal;
+                if (simplecpiAnnuityPot <= 0) break;
+                simplecpiAnnuityIncome += simpleannualWithdrawal;
+            }
+            const simpleestimatedCpiAnnualPension = simplecpiAnnuityIncome / simplelifeExpectancyYears;
+
             // Display results
             const results = document.getElementById('results');
             const projectionResults = document.getElementById('projectionResults');
@@ -215,7 +231,8 @@
                 <div class="result-item">Future Annual contributions: £${futureannualContribution.toLocaleString(undefined, {maximumFractionDigits: 0})}</div>
                 <div class="result-item">Estimated pot at retirement with additional future saving: £${furtherfuturePot.toLocaleString(undefined, {maximumFractionDigits: 0})}</div>
                 <div class="result-item">Estimated yearly pension with additional future saving: £${furtherestimatedAnnualPension.toLocaleString(undefined, {maximumFractionDigits: 0})}</div>
-                <div class="result-item">Estimated yearly pension (CPI-linked annuity): £${estimatedCpiAnnualPension.toLocaleString(undefined, {maximumFractionDigits: 0})}</div>
+                <div class="result-item">Estimated yearly pension (CPI-linked annuity): £${simpleestimatedCpiAnnualPension.toLocaleString(undefined, {maximumFractionDigits: 0})}</div>
+                <div class="result-item">Estimated yearly pension with additional future saving (CPI-linked annuity): £${estimatedCpiAnnualPension.toLocaleString(undefined, {maximumFractionDigits: 0})}</div>
             `;
 
             results.style.display = 'block';
