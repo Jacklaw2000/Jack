@@ -53,8 +53,8 @@
         <div class="segment">
             <label for="Gender">Choose a gender:</label>
             <select name="Gender" id="Gender" required>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
+                <option value="89">Male</option>
+                <option value="93">Female</option>
             </select>
         </div>
 
@@ -138,6 +138,7 @@
             event.preventDefault();
 
             // Get input values
+            const Gender = parseInt(document.getElementById('Gender').value);
             const birthDate = new Date(document.getElementById('Birth').value);
             const currentAge = new Date().getFullYear() - birthDate.getFullYear();
             const retirementAge = parseInt(document.getElementById('AgeToRetire').value);
@@ -186,6 +187,22 @@
             const furtherestimatedAnnualPension = furtherfuturePot * 0.04; // Using 4% withdrawal rate
             const furtherestimatedMonthlyPension = furtherestimatedAnnualPension / 12;
 
+            // Parameters for CPI-linked annuity calculation
+            const lifeExpectancyYears = Gender - retirementAge; // Adjust based on desired payout period
+            const cpiRate = 0.02; // Assume 2% CPI inflation
+            let cpiAnnuityIncome = 0;
+            let cpiAnnuityPot = furtherfuturePot;
+            const initialWithdrawalRate = 0.04;
+        
+            // Calculate CPI-tracked annuity
+            for (let year = 1; year <= lifeExpectancyYears; year++) {
+                let annualWithdrawal = cpiAnnuityPot * initialWithdrawalRate * Math.pow(1 + cpiRate, year - 1);
+                cpiAnnuityPot -= annualWithdrawal;
+                if (cpiAnnuityPot <= 0) break;
+                cpiAnnuityIncome += annualWithdrawal;
+            }
+            const estimatedCpiAnnualPension = cpiAnnuityIncome / lifeExpectancyYears;
+
             // Display results
             const results = document.getElementById('results');
             const projectionResults = document.getElementById('projectionResults');
@@ -198,6 +215,7 @@
                 <div class="result-item">Future Annual contributions: £${futureannualContribution.toLocaleString(undefined, {maximumFractionDigits: 0})}</div>
                 <div class="result-item">Estimated pot at retirement with additional future saving: £${furtherfuturePot.toLocaleString(undefined, {maximumFractionDigits: 0})}</div>
                 <div class="result-item">Estimated yearly pension with additional future saving: £${furtherestimatedAnnualPension.toLocaleString(undefined, {maximumFractionDigits: 0})}</div>
+                <div class="result-item">Estimated yearly pension (CPI-linked annuity): £${estimatedCpiAnnualPension.toLocaleString(undefined, {maximumFractionDigits: 0})}</div>
             `;
 
             results.style.display = 'block';
