@@ -174,21 +174,21 @@
             // Calculate future pot with compound interest
             let futurePot = currentPot;
             for (let i = 0; i < initialContributionTime; i++) {
-                futurePot = ((futurePot + annualContribution) * (1 + assumedGrowthRate))*(1 - PensionCharge);
+                futurePot = (futurePot * (1 + assumedGrowthRate) - (futurePot * PensionCharge)) + annualContribution;
             }
             futurePot *= TaxFree;  // Apply tax-free amount after initial contributions
             
             // Calculate further future pot with compound interest
             let furtherfuturePot = futurePot;
             for (let i = 0; i < yearsToRetirementafterinitial; i++) {
-                furtherfuturePot = ((furtherfuturePot + futureannualContribution) * (1 + assumedGrowthRate))*(1 - PensionCharge);
+                furtherfuturePot = (furtherfuturePot * (1 + assumedGrowthRate) - (furtherfuturePot * PensionCharge)) + futureannualContribution;
             }
             furtherfuturePot *= TaxFree;
-
+            
             // Calculate simple future pot with compound interest
             let simplefuturePot = currentPot;
             for (let i = 0; i < yearsToRetirement; i++) {
-                simplefuturePot = ((simplefuturePot + annualContribution) * (1 + assumedGrowthRate))*(1 - PensionCharge);
+                simplefuturePot = (simplefuturePot * (1 + assumedGrowthRate) - (simplefuturePot * PensionCharge)) + annualContribution;
             }
             simplefuturePot *= TaxFree;
 
