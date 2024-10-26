@@ -89,6 +89,14 @@
         </div>
 
         <div class="segment">
+            <label for="TaxFree">Will you take 25% Tax free lump sum?:</label>
+            <select name="TaxFree" id="TaxFree" required>
+                <option value="0.75">Yes</option>
+                <option value="1">No</option>
+            </select>
+        </div>
+
+        <div class="segment">
             <label for="FutureIncrease">Will this increase in the future?:</label>
             <select name="FutureIncrease" id="FutureIncrease" required onchange="toggleFutureQuestions()">
                 <option value="No">No</option>
@@ -146,6 +154,7 @@
             const salary = parseFloat(document.getElementById('CurrentSalary').value);
             const employeeContribution = parseFloat(document.getElementById('EmployeeContribution').value) / 100;
             const employerContribution = parseFloat(document.getElementById('EmployerContribution').value) / 100;
+            const TaxFree = parseInt(document.getElementById('TaxFree').value);
             const initialContributionTime = parseFloat(document.getElementById('CurrentContribution').value);
             const futuresalary = parseFloat(document.getElementById('FutureSalary').value);
             const futureemployeeContribution = parseFloat(document.getElementById('FutureEmployeeContribution').value) / 100;
@@ -167,18 +176,21 @@
             for (let i = 0; i < initialContributionTime; i++) {
                 futurePot = ((futurePot + annualContribution) * (1 + assumedGrowthRate))*(1 - PensionCharge);
             }
-
+            const futurePot = futurePot*TaxFree
+            
             // Calculate further future pot with compound interest
             let furtherfuturePot = futurePot;
             for (let i = 0; i < yearsToRetirementafterinitial; i++) {
                 furtherfuturePot = ((furtherfuturePot + futureannualContribution) * (1 + assumedGrowthRate))*(1 - PensionCharge);
             }
+            const furtherfuturePot = furtherfuturePot*TaxFree
 
             // Calculate simple future pot with compound interest
             let simplefuturePot = currentPot;
             for (let i = 0; i < yearsToRetirement; i++) {
                 simplefuturePot = ((simplefuturePot + annualContribution) * (1 + assumedGrowthRate))*(1 - PensionCharge);
             }
+            const simplefuturePot = simplefuturePot*TaxFree
 
             // Calculate simple estimated monthly pension
             const estimatedAnnualPension = simplefuturePot * 0.04; // Using 4% withdrawal rate
