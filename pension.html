@@ -87,6 +87,44 @@
             <input type="number" id="EmployerContribution" name="EmployerContribution" min="0" max="100" required>
         </div>
 
+        <div class="segment">
+            <label for="FutureIncrease">Will this increase in the future?:</label>
+            <select name="FutureIncrease" id="FutureIncrease" required onchange="toggleFutureQuestions()">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+        </div>
+        
+        <div id="futureQuestions" style="display: none;">
+            <div class="segment">
+                <label for="CurrentContribution">How many years at the current above salary and contribution?:</label>
+                <input type="number" id="CurrentContribution" name="CurrentContribution" min="0" max="100" required>
+            </div>
+            
+            <div class="segment">
+                <label for="FutureSalary">Future Salary (£):</label>
+                <input type="number" id="FutureSalary" name="FutureSalary" min="0" required>
+            </div>
+            
+            <div class="segment">
+                <label for="FutureEmployeeContribution">How much will you contribute to your pension? (%):</label>
+                <input type="number" id="FutureEmployeeContribution" name="FutureEmployeeContribution" min="0" max="100" required>
+            </div>
+            
+            <div class="segment">
+                <label for="FutureEmployerContribution">How much will your employer contribute to your pension? (%):</label>
+                <input type="number" id="FutureEmployerContribution" name="FutureEmployerContribution" min="0" max="100" required>
+            </div>
+        </div>
+
+        <script>
+        function toggleFutureQuestions() {
+            const futureIncrease = document.getElementById('FutureIncrease').value;
+            const futureQuestions = document.getElementById('futureQuestions');
+            futureQuestions.style.display = futureIncrease === 'Yes' ? 'block' : 'none';
+        }
+        </script>
+
         <button type="submit">Calculate Pension</button>
     </form>
 
