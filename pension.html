@@ -108,15 +108,20 @@
             const employeeContribution = parseFloat(document.getElementById('EmployeeContribution').value) / 100;
             const employerContribution = parseFloat(document.getElementById('EmployerContribution').value) / 100;
 
+            //Pension Charges
+            const PensionCharge = 0.0052
+
             // Calculate projections
             const yearsToRetirement = retirementAge - currentAge;
             const annualContribution = salary * (employeeContribution + employerContribution);
-            const assumedGrowthRate = 0.05; // 5% annual growth
+            const assumedGrowthRate = 0.02; // 2% annual growth
+            const contributionGrowthRate = 0.015; // 2% annual growth
 
             // Calculate future pot with compound interest
             let futurePot = currentPot;
             for (let i = 0; i < yearsToRetirement; i++) {
-                futurePot = (futurePot + annualContribution) * (1 + assumedGrowthRate);
+                annualContribution = annualContribution * (1 + contributionGrowthRate)
+                futurePot = ((futurePot + annualContribution) * (1 + assumedGrowthRate))*(1 - PensionCharge);
             }
 
             // Calculate estimated monthly pension
