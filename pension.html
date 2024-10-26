@@ -8,7 +8,7 @@
         .segment {
             margin-bottom: 20px;
         }
-        
+
         select, input {
             display: block;
             margin-top: 5px;
@@ -98,7 +98,7 @@
     <script>
         function calculatePension(event) {
             event.preventDefault();
-            
+
             // Get input values
             const birthDate = new Date(document.getElementById('Birth').value);
             const currentAge = new Date().getFullYear() - birthDate.getFullYear();
@@ -113,17 +113,14 @@
 
             // Calculate projections
             const yearsToRetirement = retirementAge - currentAge;
-            const totalAnnualContribution = salary * (employeeContribution + employerContribution);
+            const annualContribution = salary * (employeeContribution + employerContribution);
             const assumedGrowthRate = 0.02; // 2% annual growth
-            const contributionGrowthRate = 0.015; // 2% annual growth
-
+            
+            // Calculate future pot with compound interest
             let futurePot = currentPot;
-            let annualContribution = totalAnnualContribution;
             for (let i = 0; i < yearsToRetirement; i++) {
-                annualContribution *= (1 + contributionGrowthRate);
-                futurePot = ((futurePot + annualContribution) * (1 + assumedGrowthRate)) * (1 - PensionCharge);
-                }
-
+                futurePot = ((futurePot + annualContribution) * (1 + assumedGrowthRate))*(1 - PensionCharge);
+            }
 
             // Calculate estimated monthly pension
             const estimatedAnnualPension = futurePot * 0.04; // Using 4% withdrawal rate
@@ -132,14 +129,14 @@
             // Display results
             const results = document.getElementById('results');
             const projectionResults = document.getElementById('projectionResults');
-            
+
             projectionResults.innerHTML = `
                 <div class="result-item">Years until retirement: ${yearsToRetirement}</div>
                 <div class="result-item">Annual contributions: £${annualContribution.toLocaleString(undefined, {maximumFractionDigits: 0})}</div>
                 <div class="result-item">Estimated pot at retirement: £${futurePot.toLocaleString(undefined, {maximumFractionDigits: 0})}</div>
                 <div class="result-item">Estimated monthly pension: £${estimatedMonthlyPension.toLocaleString(undefined, {maximumFractionDigits: 0})}</div>
             `;
-            
+
             results.style.display = 'block';
         }
     </script>
