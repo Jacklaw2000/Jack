@@ -117,14 +117,6 @@
             </div>
         </div>
 
-        <script>
-        function toggleFutureQuestions() {
-            const futureIncrease = document.getElementById('FutureIncrease').value;
-            const futureQuestions = document.getElementById('futureQuestions');
-            futureQuestions.style.display = futureIncrease === 'Yes' ? 'block' : 'none';
-        }
-        </script>
-
         <button type="submit">Calculate Pension</button>
     </form>
 
@@ -134,6 +126,13 @@
     </div>
 
     <script>
+        // Future questions toggle
+        function toggleFutureQuestions() {
+                    const futureIncrease = document.getElementById('FutureIncrease').value;
+                    const futureQuestions = document.getElementById('futureQuestions');
+                    futureQuestions.style.display = futureIncrease === 'Yes' ? 'block' : 'none';
+                }
+        
         function calculatePension(event) {
             event.preventDefault();
 
