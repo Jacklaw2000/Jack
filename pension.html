@@ -1,26 +1,41 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .segment {
+            margin-bottom: 20px;
+        }
+        
+        /* Make form elements stack vertically */
+        select, input {
+            display: block;
+            margin-top: 5px;
+            padding: 8px;
+            width: 200px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
 </head>
 <body>
     <h1>Pension Calculator</h1>
-<div class="segment">
-    <label for="Gender">Choose a gender:</label>
+    <div class="segment">
+        <label for="Gender">Choose a gender:</label>
+        <select name="Gender" id="Gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+    </div>
 
-    <select name="Gender" id="Gender">
-  <option value="Male">Male</option>
-  <option value="Female">Female</option>
-</div><br>
-
-<div class="segment">
-    <label for="Birth">Birth date:</label>
-
-<input type="date" id="Birth" name="Birth" value="2000-01-01" min="1900-01-01" max="2050-12-31" />
-</div><br>
-    
-
-</select>
+    <div class="segment">
+        <label for="Birth">Birth date:</label>
+        <input type="date" id="Birth" name="Birth" value="2000-01-01" min="1900-01-01" max="2050-12-31" />
+    </div>
 </body>
 </html>
