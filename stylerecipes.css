@@ -1,0 +1,30 @@
+/*header style*/
+header {
+    text-align: center; 
+    padding: 20px;
+ }
+ /*navigation menu style*/
+ nav {
+    text-align: center;
+    word-spacing: 30px;
+    Padding: 10px;
+ }
+ /*creating the two-column layout*/
+ *{
+    box-sizing: border-box;
+ }
+ .row {
+    display: flex;
+    flex-wrap: wrap;
+ }
+ .Ingredients-Nutrients {
+    flex: 70%;
+    padding: 20px;
+ }
+ .Method {
+    flex: 70%;
+    padding: 20px;
+ }
+ .Method h1 {
+    text-align: center;
+ }
