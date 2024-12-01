@@ -17,6 +17,11 @@ header {
     display: flex;
     flex-wrap: wrap;
  }
+ /* Create two equal columns that sits next to each other */
+.column {
+    flex: 50%;
+    padding: 10px;
+  }
  .Ingredients-Nutrients {
     flex: 40%;
     padding: 20px;
