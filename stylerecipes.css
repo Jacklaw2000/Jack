@@ -19,10 +19,10 @@ header {
  }
  /* Create two equal columns that sits next to each other */
  .Ingredients-Nutrients {
-    flex: 40%;
+    flex: 50%;
     padding: 20px;
  }
  .Method {
-    flex: 60%;
-    padding: 20px;
+    flex: 50%;
+    padding: 40px;
  }
