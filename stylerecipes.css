@@ -18,11 +18,11 @@ header {
     flex-wrap: wrap;
  }
  .Ingredients-Nutrients {
-    flex: 70%;
+    flex: 40%;
     padding: 20px;
  }
  .Method {
-    flex: 70%;
+    flex: 60%;
     padding: 20px;
  }
  .Method h1 {
