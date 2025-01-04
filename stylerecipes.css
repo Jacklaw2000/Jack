@@ -1,21 +1,29 @@
-/* Add icon library (if using Font Awesome for icons) */
+/* Import Font Awesome for icons */
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 
-/* Style buttons */
-.btn {
-    background-color: orange; /* Orange background */
-    border: none; /* Remove borders */
-    color: black; /* Black text */
-    padding: 12px 16px; /* Some padding */
-    font-size: 16px; /* Set a font size */
-    cursor: pointer; /* Mouse pointer on hover */
+/* Style buttons as links */
+a.btn {
+    display: inline-block; /* Make links behave like buttons */
+    background-color: orange; /* Button background color */
+    color: black; /* Button text color */
+    padding: 12px 16px; /* Padding for buttons */
+    font-size: 16px; /* Font size */
+    text-decoration: none; /* Remove underline */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Optional: Add rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-align: center; /* Center text and icons */
 }
 
-/* Darker background on mouse-over */
-.btn:hover {
-    background-color: orangered;
+/* Hover effect for buttons */
+a.btn:hover {
+    background-color: orangered; /* Darker background color on hover */
 }
 
+/* Style the icons */
+a.btn i {
+    margin-right: 8px; /* Space between icon and text */
+}
 
 /*header style*/
 header {
