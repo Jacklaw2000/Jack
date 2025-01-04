@@ -12,7 +12,7 @@ a.btn {
     border: none; /* Remove border */
     border-radius: 4px; /* Optional: Add rounded corners */
     cursor: pointer; /* Pointer cursor on hover */
-    text-align: center; /* Center text and icons */
+    text-align: left; /* Center text and icons */
     margin: 5px; /* Add spacing between buttons */
 }
 
