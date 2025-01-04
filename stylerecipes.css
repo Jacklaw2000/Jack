@@ -37,7 +37,8 @@ a.btn i {
 header {
    text-align: center; 
    padding: 20px;
-   font: 28px Arial; /* Example with font size included */
+   font-size: 28px;
+   font-family: Arial;
 }
 
 /*navigation menu style*/
