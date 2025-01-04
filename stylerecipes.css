@@ -13,18 +13,19 @@ header {
  *{
     box-sizing: border-box;
  }
- 
+
  /* Create three unequal columns that floats next to each other */
  .column {
     float: left;
     text-align: center;
  }
- .Ingredients, .Nutrition {
+ .left, .right {
     width: 25%;
     text-align: center;
  }
- .Method {
+ .middle {
    width: 50%;
+   text-align: center;
  }
 
  /* Clear floats after the columns */
