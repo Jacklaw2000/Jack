@@ -36,7 +36,15 @@ a.btn i {
 /*header style*/
 header {
    text-align: center; 
-   padding: 20px;
+   padding: 10px;
+   font-size: 28px;
+   font-family: Arial;
+}
+
+/*h1 style*/
+h1 {
+   text-align: center; 
+   padding: 10px;
    font-size: 28px;
    font-family: Arial;
 }
