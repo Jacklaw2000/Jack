@@ -43,8 +43,7 @@ header {
 
 /*h1 style*/
 h1 {
-   text-align: center; 
-   padding: 10px;
+   text-align: center;
    font-size: 28px;
    font-family: Arial;
 }
@@ -52,7 +51,8 @@ h1 {
 /*navigation menu style*/
 nav {
    text-align: center;
-   padding: 10px; /* Fixed capitalization */
+   padding: 10px;
+   font-size: 12px;
 }
 
 /*creating the three-column layout*/
