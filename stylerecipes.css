@@ -13,6 +13,13 @@ a.btn {
     border-radius: 4px; /* Optional: Add rounded corners */
     cursor: pointer; /* Pointer cursor on hover */
     text-align: center; /* Center text and icons */
+    margin: 5px; /* Add spacing between buttons */
+}
+
+/* Remove underline (extra safeguard) */
+a.btn:link,
+a.btn:visited {
+    text-decoration: none; /* Ensure no underline on links */
 }
 
 /* Hover effect for buttons */
@@ -23,8 +30,8 @@ a.btn:hover {
 /* Style the icons */
 a.btn i {
     margin-right: 8px; /* Space between icon and text */
+    color: black; /* Icon color */
 }
-
 
 /*header style*/
 header {
