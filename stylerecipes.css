@@ -1,3 +1,22 @@
+/* Add icon library (if using Font Awesome for icons) */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+/* Style buttons */
+.btn {
+    background-color: orange; /* Orange background */
+    border: none; /* Remove borders */
+    color: black; /* Black text */
+    padding: 12px 16px; /* Some padding */
+    font-size: 16px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+    background-color: orangered;
+}
+
+
 /*header style*/
 header {
    text-align: center; 
