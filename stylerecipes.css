@@ -43,24 +43,24 @@ header {
 
 h1 {
     text-align: center;
-    font-size: 28px;
+    font-size: 48px;
     font-family: Arial, sans-serif;
 }
 
 h2 {
     text-align: center;
-    font-size: 26px;
+    font-size: 36px;
     font-family: Helvetica, sans-serif;
 }
 
 h3 {
     text-align: center;
-    font-size: 18px;
+    font-size: 24px;
     font-family: Helvetica, sans-serif;
 }
 
 p {
-   font-size: 16px; /* Set font size */
+   font-size: 20px; /* Set font size */
    font-family: Arial, sans-serif; /* Set font family */
    color: black; /* Set text color */
 }
