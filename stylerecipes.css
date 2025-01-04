@@ -48,6 +48,13 @@ h1 {
    font-family: Arial;
 }
 
+/*title style*/
+title {
+   text-align: center;
+   font-size: 28px;
+   font-family: Arial;
+}
+
 /*navigation menu style*/
 nav {
    text-align: center;
