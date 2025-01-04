@@ -12,7 +12,7 @@ a.btn {
     border: none; /* Remove border */
     border-radius: 4px; /* Optional: Add rounded corners */
     cursor: pointer; /* Pointer cursor on hover */
-    text-align: left; /* Center text and icons */
+    text-align: center; /* Center text and icons */
     margin: 5px; /* Add spacing between buttons */
 }
 
@@ -27,89 +27,79 @@ a.btn:hover {
     background-color: orangered; /* Darker background color on hover */
 }
 
-/* Style the icons */
+/* Style the icons inside buttons */
 a.btn i {
     margin-right: 8px; /* Space between icon and text */
     color: black; /* Icon color */
 }
 
-/*header style*/
+/* Typography styles */
 header {
-   text-align: center; 
-   padding: 10px;
-   font-size: 16px;
-   font-family: Arial;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
 }
 
-/*h1 style*/
 h1 {
-   text-align: center;
-   font-size: 28px;
-   font-family: Arial;
+    text-align: center;
+    font-size: 28px;
+    font-family: Arial, sans-serif;
 }
 
-/*h2 style*/
 h2 {
-   text-align: center;
-   font-size: 26px;
-   font-family: Helvetica;
+    text-align: center;
+    font-size: 26px;
+    font-family: Helvetica, sans-serif;
 }
 
-/*h3 style*/
 h3 {
-   text-align: center;
-   font-size: 18px;
-   font-family: Helvetica;
+    text-align: center;
+    font-size: 18px;
+    font-family: Helvetica, sans-serif;
 }
 
-/*title style*/
-title {
-   text-align: center;
-   font-size: 28px;
-   font-family: Arial;
-}
-
-/*navigation menu style*/
+/* Navigation menu style */
 nav {
-   text-align: center;
-   padding: 10px;
+    text-align: center;
+    padding: 10px;
 }
 
-/*creating the three-column layout*/
+/* Layout styles */
 * {
-   box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /* Create three unequal columns that float next to each other */
 .column {
-   float: left; /* Allow columns to float next to each other */
+    float: left; /* Allow columns to float next to each other */
 }
 
 .left {
-   width: 25%;
-   text-align: center;
+    width: 25%;
+    text-align: center;
 }
 
 .middle {
-   width: 50%;
-   text-align: center;
+    width: 50%;
+    text-align: center;
 }
 
 .right {
-   width: 25%;
-   text-align: center;
+    width: 25%;
+    text-align: center;
 }
 
 /* Clear floats after the columns */
 .row:after {
-   content: "";
-   display: table;
-   clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
 
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+/* Responsive layout - makes the three columns stack on top of each other */
 @media screen and (max-width: 600px) {
-   .column {
-       width: 100%;
-   }
+    .column {
+        width: 100%;
+    }
 }
