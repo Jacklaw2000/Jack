@@ -3,7 +3,7 @@
 
 /* Global style to remove underline from all links */
 a {
-    text-decoration: none; /* Remove underline */
+    text-decoration: none !important; /* Remove underline with higher priority */
 }
 
 /* Style buttons as links */
@@ -86,7 +86,7 @@ p {
 .column img {
     display: block;
     margin: 0 auto; /* Center the image */
-    width: 150px; 
+    width: 150px;
     height: 130px;
 }
 
