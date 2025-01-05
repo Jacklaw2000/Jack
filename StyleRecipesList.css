@@ -85,3 +85,10 @@ p {
     width: 42px; 
     height: 42px;
 }
+
+/* Center the "Home" button in the footer */
+footer nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Optional: Add some space above the button */
+}
