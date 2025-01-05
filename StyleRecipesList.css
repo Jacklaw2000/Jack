@@ -48,13 +48,6 @@ a.btn i {
     }
 }
 
-/* Center the "Home" button in the footer */
-footer nav {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px; /* Optional: Add some space above the button */
-}
-
 /* Typography styles */
 h1 {
     text-align: center;
@@ -78,4 +71,17 @@ p {
     font-size: 20px; /* Set font size */
     font-family: Arial, sans-serif; /* Set font family */
     color: black; /* Set text color */
+}
+
+/* Ensure images and links stack vertically */
+.column a {
+    display: block;
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+.column img {
+    display: block;
+    margin: 0 auto; /* Center the image */
+    width: 42px; 
+    height: 42px;
 }
