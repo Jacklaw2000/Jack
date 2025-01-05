@@ -1,6 +1,11 @@
 /* Import Font Awesome for icons */
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css");
 
+/* Global style to remove underline from all links */
+a {
+    text-decoration: none; /* Remove underline */
+}
+
 /* Style buttons as links */
 a.btn {
     display: inline-block; /* Make links behave like buttons */
@@ -8,7 +13,6 @@ a.btn {
     color: black; /* Button text color */
     padding: 12px 16px; /* Padding for buttons */
     font-size: 16px; /* Font size */
-    text-decoration: none; /* Remove underline */
     border: none; /* Remove border */
     border-radius: 4px; /* Optional: Add rounded corners */
     cursor: pointer; /* Pointer cursor on hover */
