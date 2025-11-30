@@ -24,7 +24,6 @@
         <h2>Sunset: <span id="sunset"></span></h2>
         <h2>Daylight: <span id="daylight"></span></h2>
         <h2>Current Time: <span id="current-time"></span></h2>
-        <div id="sun-graph"></div>
     </div>
 
     <script>
@@ -49,10 +48,6 @@
             const minutes = Math.round(daylightDuration % 60);
             document.getElementById("daylight").textContent = `${hours} hours ${minutes} minutes`;
             });
-
-        // Sun Graph (embed from timeanddate)
-        document.getElementById("sun-graph").innerHTML =
-            `<iframe src="https://www.timeanddate.com/sun/@${lat},${lng}" width="100%" height="400" frameborder="0"></iframe>`;
         }
 
     function error() {
