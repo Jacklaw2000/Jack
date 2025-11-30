@@ -22,22 +22,35 @@
     <div class="segment">
         <h2>Sunrise: <span id="sunrise"></span></h2>
         <h2>Sunset: <span id="sunset"></span></h2>
+        <div id="sun-graph"></div>
     </div>
 
     <script>
-        // Aberdeen coordinates
-        const lat = 57.1497;
-        const lng = -2.0943;
+    navigator.geolocation.getCurrentPosition(success, error);
 
+    function success(position) {
+        const lat = position.coords.latitude;
+        const lng = position.coords.longitude;
+
+        // Sunrise/Sunset
         fetch(`https://api.sunrise-sunset.org/json?lat=${lat}&lng=${lng}&formatted=0`)
-          .then(response => response.json())
-          .then(data => {
+            .then(response => response.json())
+            .then(data => {
             const sunrise = new Date(data.results.sunrise);
             const sunset = new Date(data.results.sunset);
-
             document.getElementById("sunrise").textContent = sunrise.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
             document.getElementById("sunset").textContent = sunset.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
-          });
+            });
+
+        // Sun Graph (embed from timeanddate)
+        document.getElementById("sun-graph").innerHTML =
+            `<iframe src="https://www.timeanddate.com/sun/@${lat},${lng}" width="100%" height="400" frameborder="0"></iframe>`;
+        }
+
+    function error() {
+        document.getElementById("sunrise").textContent = "Location unavailable";
+        document.getElementById("sunset").textContent = "Location unavailable";
+        }
     </script>
 </body>
 </html>
