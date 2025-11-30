@@ -24,6 +24,7 @@
         <h2>Sunset: <span id="sunset"></span></h2>
         <h2>Daylight: <span id="daylight"></span></h2>
         <h2>Current Time: <span id="current-time"></span></h2>
+        <h2>Weather: <span id="weather"></span></h2>
     </div>
 
     <script>
@@ -48,7 +49,56 @@
             const minutes = Math.round(daylightDuration % 60);
             document.getElementById("daylight").textContent = `${hours} hours ${minutes} minutes`;
             });
+
+        // Weather
+        const apiKey = "eyJ4NXQjUzI1NiI6Ik5XVTVZakUxTkRjeVl6a3hZbUl4TkdSaFpqSmpOV1l6T1dGaE9XWXpNMk0yTWpRek5USm1OVEE0TXpOaU9EaG1NVFJqWVdNellXUm1ZalUyTTJJeVpBPT0iLCJraWQiOiJnYXRld2F5X2NlcnRpZmljYXRlX2FsaWFzIiwidHlwIjoiSldUIiwiYWxnIjoiUlMyNTYifQ==.eyJzdWIiOiJKYWNrLmxhd0BsaXZlLmNvLnVrQGNhcmJvbi5zdXBlciIsImFwcGxpY2F0aW9uIjp7Im93bmVyIjoiSmFjay5sYXdAbGl2ZS5jby51ayIsInRpZXJRdW90YVR5cGUiOm51bGwsInRpZXIiOiJVbmxpbWl0ZWQiLCJuYW1lIjoiYXRtb3NwaGVyaWMtNzUyMjk5ZDUtNjVjYy00ZjgyLTk3ZTktMGQ1N2MzYmQ3MGMxIiwiaWQiOjMxNjY1LCJ1dWlkIjoiN2U2ZDlmOTEtNDdmMi00YzYxLTlhZGYtZDk3YTRmMzc2ZmZhIn0sImlzcyI6Imh0dHBzOlwvXC9hcGktbWFuYWdlci5hcGktbWFuYWdlbWVudC5tZXRvZmZpY2UuY2xvdWQ6NDQzXC9vYXV0aDJcL3Rva2VuIiwidGllckluZm8iOnsid2RoX2F0bW9zcGhlcmljX2ZyZWUiOnsidGllclF1b3RhVHlwZSI6InJlcXVlc3RDb3VudCIsImdyYXBoUUxNYXhDb21wbGV4aXR5IjowLCJncmFwaFFMTWF4RGVwdGgiOjAsInN0b3BPblF1b3RhUmVhY2giOnRydWUsInNwaWtlQXJyZXN0TGltaXQiOjAsInNwaWtlQXJyZXN0VW5pdCI6InNlYyJ9fSwia2V5dHlwZSI6IlBST0RVQ1RJT04iLCJzdWJzY3JpYmVkQVBJcyI6W3sic3Vic2NyaWJlclRlbmFudERvbWFpbiI6ImNhcmJvbi5zdXBlciIsIm5hbWUiOiJhdG1vc3BoZXJpYy1tb2RlbHMiLCJjb250ZXh0IjoiXC9hdG1vc3BoZXJpYy1tb2RlbHNcLzEuMC4wIiwicHVibGlzaGVyIjoiV0RIX0NJIiwidmVyc2lvbiI6IjEuMC4wIiwic3Vic2NyaXB0aW9uVGllciI6IndkaF9hdG1vc3BoZXJpY19mcmVlIn1dLCJ0b2tlbl90eXBlIjoiYXBpS2V5IiwiaWF0IjoxNzY0NTMwNjUwLCJqdGkiOiJlMDFlNmZmZC1jNmMyLTRmZDMtYjEzMy0zMzBkYWFmMWUxNjgifQ==.KUuZHBIjDRKIXeX0pzC127zawfpXzP3bt32Ks09Psq1agAb2n1_S5O3Ec28gi4ZVMetTQuP2nQlAzf5J1HR1pPCcEawOuIfaOoAx0xZDFnAUmZvMpoUrzgyqN6fe6w3Q6Lx3m9-nSUlAn07LvNmkYwSFtD7vN9ZW_BV-6rMQh_-XqQ72kR6-hCYtiGoePnQCgo-i-bKQrTl1mH9Ui-AwcRbKCjUDSmiRTSYisMU54qMwINTn8Irnu2hdgihsTqr_JmD9Ob0IJcWIF8AWz_UfMHIhy5g6WdQgchp4gzSQOrLJ12BvEVt7I2t0J9Xxfxf5KrM57w9wleqvOGqDPZmqOg=="; // replace with your key
+        const url = `https://data.hub.api.metoffice.gov.uk/sitespecific/v0/point/hourly?latitude=${lat}&longitude=${lng}&includeLocationName=true`;
+        const weatherMap = {
+            0: "Clear night",
+            1: "Sunny day",
+            2: "Partly cloudy (night)",
+            3: "Partly cloudy (day)",
+            5: "Mist",
+            6: "Fog",
+            7: "Cloudy",
+            8: "Overcast",
+            9: "Light rain shower (night)",
+            10: "Light rain shower (day)",
+            11: "Drizzle",
+            12: "Light rain",
+            13: "Heavy rain shower (night)",
+            14: "Heavy rain shower (day)",
+            15: "Heavy rain",
+            16: "Sleet shower (night)",
+            17: "Sleet shower (day)",
+            18: "Sleet",
+            19: "Hail shower (night)",
+            20: "Hail shower (day)",
+            21: "Hail",
+            22: "Light snow shower (night)",
+            23: "Light snow shower (day)",
+            24: "Light snow",
+            25: "Heavy snow shower (night)",
+            26: "Heavy snow shower (day)",
+            27: "Heavy snow",
+            28: "Thunder shower (night)",
+            29: "Thunder shower (day)",
+            30: "Thunder"
+            };
+        fetch(url, {
+            headers: { "apikey": apiKey }
+        })
+        .then(response => response.json())
+        .then(data => {
+            const forecast = data.features[0].properties.timeSeries[0];
+            const temp = forecast.screenTemperature;
+            const weatherCode = forecast.significantWeatherCode;
+
+            document.getElementById("weather").textContent =
+            `${temp}°C, code ${weatherCode}`;
+        });
         }
+        navigator.geolocation.getCurrentPosition(success);
 
     function error() {
         document.getElementById("sunrise").textContent = "Location unavailable";
