@@ -95,7 +95,7 @@
             const weatherCode = forecast.significantWeatherCode;
 
             document.getElementById("weather").textContent =
-            `${temp}°C, code ${weatherCode}`;
+            `${temp}°C, code ${weatherMap[weatherCode] || "Unknown"}`;
         });
         }
         navigator.geolocation.getCurrentPosition(success);
