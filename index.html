@@ -22,6 +22,7 @@
     <div class="segment">
         <h2>Sunrise: <span id="sunrise"></span></h2>
         <h2>Sunset: <span id="sunset"></span></h2>
+        <h2>Daylight: <span id="daylight"></span></h2>
         <div id="sun-graph"></div>
     </div>
 
@@ -38,8 +39,14 @@
             .then(data => {
             const sunrise = new Date(data.results.sunrise);
             const sunset = new Date(data.results.sunset);
+
             document.getElementById("sunrise").textContent = sunrise.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
             document.getElementById("sunset").textContent = sunset.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+
+            const daylightDuration = (sunset - sunrise) / (1000 * 60); // minutes
+            const hours = Math.floor(daylightDuration / 60);
+            const minutes = daylightDuration % 60;
+            document.getElementById("daylight").textContent = `${hours}h ${minutes}m`;
             });
 
         // Sun Graph (embed from timeanddate)
