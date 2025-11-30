@@ -61,6 +61,27 @@
         document.getElementById("sunrise").textContent = "Location unavailable";
         document.getElementById("sunset").textContent = "Location unavailable";
         }
+
+    function updateTime() {
+        const now = new Date();
+
+        // Format: 30 Nov 2025, 18:31:27
+        const options = {
+            day: 'numeric',
+            month: 'short',
+            year: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit'
+        };
+
+        const formatted = now.toLocaleString('en-GB', options);
+        document.getElementById("current-time").textContent = formatted;
+        }
+
+        // Update immediately, then every second
+        updateTime();
+        setInterval(updateTime, 1000);    
     </script>
 </body>
 </html>
