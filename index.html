@@ -18,5 +18,26 @@
         <a href="/Jack/recipes.html"target="_blank">Recipe Book</a>
         </div>
     <p>Welcome</p>
+
+    <div class="segment">
+        <h2>Sunrise: <span id="sunrise"></span></h2>
+        <h2>Sunset: <span id="sunset"></span></h2>
+    </div>
+
+    <script>
+        // Aberdeen coordinates
+        const lat = 57.1497;
+        const lng = -2.0943;
+
+        fetch(`https://api.sunrise-sunset.org/json?lat=${lat}&lng=${lng}&formatted=0`)
+          .then(response => response.json())
+          .then(data => {
+            const sunrise = new Date(data.results.sunrise);
+            const sunset = new Date(data.results.sunset);
+
+            document.getElementById("sunrise").textContent = sunrise.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+            document.getElementById("sunset").textContent = sunset.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+          });
+    </script>
 </body>
 </html>
