@@ -91,11 +91,11 @@
         .then(response => response.json())
         .then(data => {
             const forecast = data.features[0].properties.timeSeries[0];
-            const temp = forecast.screenTemperature;
+            const temp = Math.round(forecast.screenTemperature);
             const weatherCode = forecast.significantWeatherCode;
 
             document.getElementById("weather").textContent =
-            `${temp}°C, code ${weatherMap[weatherCode] || "Unknown"}`;
+            `${temp}°C, ${weatherMap[weatherCode] || "Unknown"}`;
         });
         }
         navigator.geolocation.getCurrentPosition(success);
