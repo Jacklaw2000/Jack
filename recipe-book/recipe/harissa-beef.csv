@@ -1,28 +1,26 @@
-Recipe Name,Harissa Beef,,Ingredients,Specific Ingredients,Ingredient Quantity (g/ml),Ingredient Calories,Ingredient Cost (£),Protein (g),Carbohydrates (g),Fat (g),Saturated Fat (g),Polyunsaturated Fat (g),Monounsaturated Fat (g),Trans Fat (g),Fibre (g),Sugar (g),Cholesterol (g),Vitamin A (g),Thiamin (B1) (g),Riboflavin (B2) (g),Niacin (B3) (g),Pantothenic Acid (B5) (g),Pyridoxine (B6) (g),Folate (B9) (g),Cobalamin (B12) (g),Vitamin C (g),Vitamin E (g),Vitamin K (g),Sodium (g),Chloride (g),Potassium (g),Calcium (g),Phosphorus (g),Magnesium (g),Sulphur (g),Iron (g),Zinc (g),Iodine (g),Selenium (g),Copper (g),Manganese (g),Fluoride (g),Chromium (g),Molybdenum (g)
-,,,Sweetcorn,Sweetcorn (ASDA),100,84,£0.27,2.8,13,1.7,0.4,0,0,0,3.9,8.4,0,0,0,0,0,0,0,0,0,0.0066,0,0,0,0,0,0,0,0,0,0.00036,0,0,0,0,0,0,0,0
-Servings,4,,Carrots & Peas,Carrots & Peas (ASDA),300,147,£0.90,8.7,17.1,2.4,0,0,0,0,12,9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-Prep Time,,,Parmesan,Grated Padano (ASDA),100,398,£1.85,33,0,29,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-Cook Time,,,Mozzarella,Light Mozzarella Drained (ASDA),120,216,£1.06,22.8,2.04,12.84,8.76,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0006,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-Overall Time,,,Chopped Tomatoes,Chopped Tomatoes with Herbs in Tomato Juice (ASDA),400,96,£0.80,5.6,14.4,1.6,0.4,0,0,0,3.6,11.6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-Total Cost (£),£8.60,,Mince,Steak Mince (ASDA lean steak mince),500,750,£3.33,135,2.5,21.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-Cost per serving (£),£2.15,,Harissa Paste,Harissa Paste (ASDA),20,37.2,£0.33,0.34,1.46,3.2,0.26,0,0,0,0.64,0.82,0,0,0,0,0,0,0,0,0,0,0,0,0.32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-Calories,442.45,,Frylight (1 cal Spray),Olive Oil Spray (Frylight),8,41.6,£0.07,0,0.016,4.328,0.584,0.56,3.04,0,0,0.008,0,0,0,0,0,0,0,0,0,0,0,0,0.00008,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-Protein (g),52.06,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-Carbohydrates (g),12.629,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-Fat (g),19.142,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-Steps,,,Equipment,Specific Equipment,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-https://www.deliciousmagazine.co.uk/recipes/harissa-beef-and-crispy-potatoes/,,,Frying Pan,Medium Frying Pan,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,Spoon,Wooden Spoon,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"1. Cook the Mince over a medium heat until browned. (Optional add herbs and spices: Paprika, Cajun, Nutmeg, Cumin, etc.)",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-2. Add any frozen Vegetables here.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"3. Add the Chopped Tomatoes and 1/2-3/4 tin of water (Less water if in a rush). Bring up to the boil, then reduce to a simmer. Stir in the harissa, season, then simmer gently for 20 minutes (or until properly mixed and reduced if in a rush).",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-4. Any any non-frozen Vegetables to the pan.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"5. Rip the Mozzarella into pieces and scatter over dish, cook until melted.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"6. Add Rice, Potatoes, Noodles etc.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Recipe Name,Harissa Beef,,Equipment,Specific Equipment,Ingredients,Specific Ingredients,Ingredient Quantity (g/ml),Ingredient Calories,Ingredient Cost (£),Protein (g),Carbohydrates (g),Fat (g),Saturated Fat (g),Polyunsaturated Fat (g),Monounsaturated Fat (g),Trans Fat (g),Fibre (g),Sugar (g),Cholesterol (g),Vitamin A (g),Thiamin (B1) (g),Riboflavin (B2) (g),Niacin (B3) (g),Pantothenic Acid (B5) (g),Pyridoxine (B6) (g),Folate (B9) (g),Cobalamin (B12) (g),Vitamin C (g),Vitamin E (g),Vitamin K (g),Sodium (g),Chloride (g),Potassium (g),Calcium (g),Phosphorus (g),Magnesium (g),Sulphur (g),Iron (g),Zinc (g),Iodine (g),Selenium (g),Copper (g),Manganese (g),Fluoride (g),Chromium (g),Molybdenum (g)
+,,,Frying Pan,Medium Frying Pan,Sweetcorn,Sweetcorn (ASDA),100,84,0.27,2.8,£13.00,1.7,0.4,0,0,0,3.9,8.4,0,0,0,0,0,0,0,0,0,0.0066,0,0,0,0,0,0,0,0,0,0.00036,0,0,0,0,0,0,0,0
+Servings,4,,Spoon,Wooden Spoon,Carrots & Peas,Carrots & Peas (ASDA),300,147,0.9,8.7,£17.10,2.4,0,0,0,0,12,9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Prep Time,,,,,Parmesan,Grated Padano (ASDA),100,398,1.85,33,£0.00,29,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Cook Time,,,,,Mozzarella,Light Mozzarella Drained (ASDA),120,216,1.06,22.8,£2.04,12.84,8.76,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0006,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Overall Time,,,,,Chopped Tomatoes,Chopped Tomatoes with Herbs in Tomato Juice (ASDA),400,96,0.8,5.6,£14.40,1.6,0.4,0,0,0,3.6,11.6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Total Cost (£),£8.60,,,,Mince,Steak Mince (ASDA lean steak mince),500,750,3.33,135,£2.50,21.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Cost per serving (£),£2.15,,,,Harissa Paste,Harissa Paste (ASDA),20,37.2,0.33,0.34,£1.46,3.2,0.26,0,0,0,0.64,0.82,0,0,0,0,0,0,0,0,0,0,0,0,0.32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Calories,442.45,,,,Frylight (1 cal Spray),Olive Oil Spray (Frylight),8,41.6,0.07,0,£0.02,4.328,0.584,0.56,3.04,0,0,0.008,0,0,0,0,0,0,0,0,0,0,0,0,0.00008,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Protein (g),52.06,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Carbohydrates (g),12.629,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Fat (g),19.142,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Steps,,Links,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+"1. Cook the Mince over a medium heat until browned. (Optional add herbs and spices: Paprika, Cajun, Nutmeg, Cumin, etc.)",,https://www.deliciousmagazine.co.uk/recipes/harissa-beef-and-crispy-potatoes/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2. Add any frozen Vegetables here.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+"3. Add the Chopped Tomatoes and 1/2-3/4 tin of water (Less water if in a rush). Bring up to the boil, then reduce to a simmer. Stir in the harissa, season, then simmer gently for 20 minutes (or until properly mixed and reduced if in a rush).",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+4. Any any non-frozen Vegetables to the pan.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+"5. Rip the Mozzarella into pieces and scatter over dish, cook until melted.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+"6. Add Rice, Potatoes, Noodles etc.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
