@@ -93,39 +93,13 @@ nav {
     float: left; /* Allow columns to float next to each other */
 }
 
-.name {
-    width: 10%;
-    text-align: center;
-}
-
-.benefits {
-    width: 20%;
-    text-align: center;
-}
-
-.food {
-    width: 10%;
-    text-align: center;
-}
-.intake {
-    width: 10%;
-    text-align: center;
-}
-
-.calories {
-    width: 10%;
-    text-align: center;
-}
-
-.ri {
-    width: 10%;
-    text-align: center;
-}
-
-.notes {
-    width: 30%;
-    text-align: center;
-}
+.name { width: 10%; text-align: center; }
+.benefits { width: 20%; text-align: center; }
+.food { width: 10%; text-align: center; }
+.intake { width: 10%; text-align: center; }
+.calories { width: 10%; text-align: center; }
+.ri { width: 10%; text-align: center; }
+.notes { width: 30%; text-align: center; }
 
 /* Clear floats after the columns */
 .row:after {
@@ -142,5 +116,13 @@ nav {
 @media screen and (max-width: 600px) {
     .column {
         width: 100%;
+    }
+    .horizontal {
+        width: 33%;
+        text-align: center;
+    }
+    .horizontal h3,
+    .horizontal p {
+        text-align: center;
     }
 }
