@@ -143,4 +143,7 @@ nav {
     .column {
         width: 100%;
     }
+    .horizontal {
+        width: 10%;
+    }
 }
