@@ -112,17 +112,33 @@ nav {
     overflow: hidden;
 }
 
-/* Responsive layout - makes the three columns stack on top of each other */
+.horizontal-row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.horizontal-row .horizontal {
+    float: none;
+}
+
+/* Responsive layout - makes the three columns stay side-by-side on phone */
 @media screen and (max-width: 600px) {
     .column {
         width: 100%;
     }
-    .horizontal {
-        width: 33%;
+    .horizontal-row {
+        flex-wrap: nowrap;
+    }
+    .horizontal-row .horizontal {
+        width: 33.333%;
+        max-width: 33.333%;
         text-align: center;
     }
-    .horizontal h3,
-    .horizontal p {
+    .horizontal-row .horizontal h3,
+    .horizontal-row .horizontal p {
         text-align: center;
     }
 }
