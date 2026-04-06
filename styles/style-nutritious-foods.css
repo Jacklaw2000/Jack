@@ -76,6 +76,10 @@ p {
    color: black; /* Set text color */
 }
 
+.center-text {
+    text-align: center;
+}
+
 
 /* Navigation menu style */
 nav {
