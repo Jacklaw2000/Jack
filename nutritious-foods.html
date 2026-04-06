@@ -7,16 +7,91 @@
     <link rel="stylesheet" href="styles/style-nutritious-foods.css">
 </head>
 <body>
+    <!-- Collapsible Table of Contents -->
+    <div class="toc-container">
+        <button class="toc-toggle" aria-label="Toggle Table of Contents">
+            <span>☰</span>
+        </button>
+        <nav class="toc-menu" id="tocMenu">
+            <ul>
+                <li><a href="#macro-nutrients">Macro-Nutrients</a>
+                    <ul>
+                        <li><a href="#protein">Protein</a></li>
+                        <li><a href="#carbohydrate">Carbohydrate</a></li>
+                        <li><a href="#fats">Fats</a></li>
+                        <li><a href="#water">Water</a></li>
+                    </ul>
+                </li>
+                <li><a href="#micro-nutrients">Micro-Nutrients</a>
+                    <ul>
+                        <li><a href="#vitamins">Vitamins</a>
+                            <ul>
+                                <li><a href="#water-soluble-vitamins">Water-Soluble</a>
+                                    <ul>
+                                        <li><a href="#thiamin-b1">Thiamin (B1)</a></li>
+                                        <li><a href="#riboflavin-b2">Riboflavin (B2)</a></li>
+                                        <li><a href="#niacin-b3">Niacin (B3)</a></li>
+                                        <li><a href="#pantothenic-acid-b5">Pantothenic acid (B5)</a></li>
+                                        <li><a href="#pyridoxine-b6">Pyridoxine (B6)</a></li>
+                                        <li><a href="#biotin-b7">Biotin (B7)</a></li>
+                                        <li><a href="#folate-b9">Folate (B9)</a></li>
+                                        <li><a href="#cobalamin-b12">Cobalamin (B12)</a></li>
+                                        <li><a href="#vitamin-c">Vitamin C</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#fat-soluble-vitamins">Fat-Soluble</a>
+                                    <ul>
+                                        <li><a href="#vitamin-a">Vitamin A</a></li>
+                                        <li><a href="#vitamin-d">Vitamin D</a></li>
+                                        <li><a href="#vitamin-e">Vitamin E</a></li>
+                                        <li><a href="#vitamin-k">Vitamin K</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#minerals">Minerals</a>
+                            <ul>
+                                <li><a href="#macro-minerals">Macro-Minerals</a>
+                                    <ul>
+                                        <li><a href="#sodium">Sodium</a></li>
+                                        <li><a href="#chloride">Chloride</a></li>
+                                        <li><a href="#potassium">Potassium</a></li>
+                                        <li><a href="#calcium">Calcium</a></li>
+                                        <li><a href="#phosphorus">Phosphorus</a></li>
+                                        <li><a href="#magnesium">Magnesium</a></li>
+                                        <li><a href="#sulphur">Sulphur</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#micro-minerals">Micro-Minerals</a>
+                                    <ul>
+                                        <li><a href="#iron">Iron</a></li>
+                                        <li><a href="#zinc">Zinc</a></li>
+                                        <li><a href="#iodine">Iodine</a></li>
+                                        <li><a href="#selenium">Selenium</a></li>
+                                        <li><a href="#copper">Copper</a></li>
+                                        <li><a href="#manganese">Manganese</a></li>
+                                        <li><a href="#fluoride">Fluoride</a></li>
+                                        <li><a href="#chromium">Chromium</a></li>
+                                        <li><a href="#molybdenum">Molybdenum</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
     <header>
         <h1>Nutrient Rich Foods</h1>
     </header>
     <main>
-        <h2>Macro-Nutrients</h2>   
+        <h2 id="macro-nutrients">Macro-Nutrients</h2>   
         <section>
             <div class="row">
                 <div class="column name">
                     <h3>Name</h3>
-                    <h4>Protein</h4>
+                    <h4 id="protein">Protein</h4>
                 </div>
                 <div class="column benefits">
                     <h3>What Does It Do?</h3>
@@ -69,7 +144,7 @@
             <div class="row">
                 <div class="column name">
                     <h3>Name</h3>
-                    <h4>Carbohydrate</h4>
+                    <h4 id="carbohydrate">Carbohydrate</h4>
                 </div>
                 <div class="column benefits">
                     <h3>What Does It Do?</h3>
@@ -129,7 +204,7 @@
                         <div class="row">
                 <div class="column name">
                     <h3>Name</h3>
-                    <h4>Fats</h4>
+                    <h4 id="fats">Fats</h4>
                 </div>
                 <div class="column benefits">
                     <h3>What Does It Do?</h3>
@@ -178,7 +253,7 @@
                     Fat intake should be reduced as much as reasonably possible. Saturated Fats should be eliminated from diet. Trans fats are not great either but generally not a problem, have less than 5g a day though. unsaturated fats are ok. Monounsaturated are good, they reduce bad LDL cholesterol. Polyunsaturated are good too, they reduce bad LDL cholesterol too, omega 3 and 6 are main types. Have less than 70g of fats a day. 20%-30% daily calories should be fats.</p>
                 </div>
             </div>
-            <h3>Water</h3>
+            <h3 id="water">Water</h3>
             <p class="center-text">2 Litres of Water a day is recommended however drinking little and often, approximately every 15 minutes can lead to better hydration during the day.
                 <a href="https://www.nhs.uk/live-well/eat-well/food-guidelines-and-food-labels/water-drinks-nutrition/">NHS Water</a>
                 <a href="https://www.bhf.org.uk/how-you-can-help/events/nutrition-for-sporting-events/hydration-and-exercise">BHF Water</a>
@@ -186,17 +261,17 @@
         </section>
             <div class="column middle">
 <!--                <img src="/Jack/images/MexicanChilliChicken.jpg" alt="Mexican Chilli Chicken" style="width:300px; height:200px;"-->
-                <h2>Micro-Nutrients</h2>
+                <h2 id="micro-nutrients">Micro-Nutrients</h2>
                 <section>
-                    <h3>Vitamins (13)</h3>
-                    <h4>Water-Soluble</h4>
+                    <h3 id="vitamins">Vitamins (13)</h3>
+                    <h4 id="water-soluble-vitamins">Water-Soluble</h4>
                     <p class="center-text">B Vitamins and folic acid 
                         <a href="https://www.nhs.uk/conditions/vitamins-and-minerals/vitamin-b/">NHS Vitamin B</a>
                     </p>
                             <div class="row">
                         <div class="column name">
                             <h3>Name</h3>
-                            <h4>Thiamin (B1)</h4>
+                            <h4 id="thiamin-b1">Thiamin (B1)</h4>
                         </div>
                         <div class="column benefits">
                             <h3>What Does It Do?</h3>
@@ -248,7 +323,7 @@
                         <div class="row">
                         <div class="column name">
                             <h3>Name</h3>
-                            <h4>Riboflavin (B2)</h4>
+                            <h4 id="riboflavin-b2">Riboflavin (B2)</h4>
                         </div>
                         <div class="column benefits">
                             <h3>What Does It Do?</h3>
@@ -300,7 +375,7 @@
                         <div class="row">
                         <div class="column name">
                             <h3>Name</h3>
-                            <h4>Niacin (B3)</h4>
+                            <h4 id="niacin-b3">Niacin (B3)</h4>
                         </div>
                         <div class="column benefits">
                             <h3>What Does It Do?</h3>
@@ -352,7 +427,7 @@
                     <div class="row">
                 <div class="column name">
                     <h3>Name</h3>
-                    <h4>Pantothenic acid (B5)</h4>
+                    <h4 id="pantothenic-acid-b5">Pantothenic acid (B5)</h4>
                 </div>
                 <div class="column benefits">
                     <h3>What Does It Do?</h3>
@@ -405,7 +480,7 @@
             </div>
                     <div class="column name">
                     <h3>Name</h3>
-                    <h4>Pyridoxine (B6)</h4>
+                    <h4 id="pyridoxine-b6">Pyridoxine (B6)</h4>
                 </div>
                 <div class="column benefits">
                     <h3>What Does It Do?</h3>
@@ -456,7 +531,7 @@
             </div>
                     <div class="column name">
                     <h3>Name</h3>
-                    <h4>Biotin (B7)</h4>
+                    <h4 id="biotin-b7">Biotin (B7)</h4>
                 </div>
                 <div class="column benefits">
                     <h3>What Does It Do?</h3>
@@ -509,7 +584,7 @@
                         <div class="row">
                         <div class="column name">
                             <h3>Name</h3>
-                            <h4>Folate (B9)</h4>
+                            <h4 id="folate-b9">Folate (B9)</h4>
                         </div>
                         <div class="column benefits">
                             <h3>What Does It Do?</h3>
@@ -561,7 +636,7 @@
                         <div class="row">
                         <div class="column name">
                             <h3>Name</h3>
-                            <h4>Cobalamin (B12)</h4>
+                            <h4 id="cobalamin-b12">Cobalamin (B12)</h4>
                         </div>
                         <div class="column benefits">
                             <h3>What Does It Do?</h3>
@@ -613,7 +688,7 @@
                         <div class="row">
                         <div class="column name">
                             <h3>Name</h3>
-                            <h4>Vitamin C (ascorbic acid)</h4>
+                            <h4 id="vitamin-c">Vitamin C (ascorbic acid)</h4>
                         </div>
                         <div class="column benefits">
                             <h3>What Does It Do?</h3>
@@ -662,11 +737,11 @@
                         Taking large amounts (more than 1,000mg per day) of vitamin C can cause: stomach pain,diarrhoea,flatulence</p>
                         </div>
                     </div> 
-                    <h4>Fat-Soluble</h4>
+                    <h4 id="fat-soluble-vitamins">Fat-Soluble</h4>
                         <div class="row">
                         <div class="column name">
                             <h3>Name</h3>
-                            <h4>Vitamin A</h4>
+                            <h4 id="vitamin-a">Vitamin A</h4>
                         </div>
                         <div class="column benefits">
                             <h3>What Does It Do?</h3>
@@ -718,7 +793,7 @@
                         <div class="row">
                         <div class="column name">
                             <h3>Name</h3>
-                            <h4>Vitamin D</h4>
+                            <h4 id="vitamin-d">Vitamin D</h4>
                         </div>
                         <div class="column benefits">
                             <h3>What Does It Do?</h3>
@@ -771,7 +846,7 @@
                         <div class="row">
                         <div class="column name">
                             <h3>Name</h3>
-                            <h4>Vitamin E</h4>
+                            <h4 id="vitamin-e">Vitamin E</h4>
                         </div>
                         <div class="column benefits">
                             <h3>What Does It Do?</h3>
@@ -823,7 +898,7 @@
                     <div class="row">
                         <div class="column name">
                             <h3>Name</h3>
-                            <h4>Vitamin K</h4>
+                            <h4 id="vitamin-k">Vitamin K</h4>
                         </div>
                         <div class="column benefits">
                             <h3>What Does It Do?</h3>
@@ -878,13 +953,13 @@
                 </section>
             </div>
             <div class="column right">
-                <h2>Minerals (16)</h2>
+                <h2 id="minerals">Minerals (16)</h2>
                 <section>
-                    <h3>Macro-Minerals</h3>
+                    <h3 id="macro-minerals">Macro-Minerals</h3>
                     <div class="row">
                         <div class="column name">
                             <h3>Name</h3>
-                            <h4>Sodium</h4>
+                            <h4 id="sodium">Sodium</h4>
                         </div>
                         <div class="column benefits">
                             <h3>What Does It Do?</h3>
@@ -938,7 +1013,7 @@
                     <div class="row">
                         <div class="column name">
                             <h3>Name</h3>
-                            <h4>Chloride</h4>
+                            <h4 id="chloride">Chloride</h4>
                         </div>
                         <div class="column benefits">
                             <h3>What Does It Do?</h3>
@@ -991,7 +1066,7 @@
                     <div class="row">
                         <div class="column name">
                             <h3>Name</h3>
-                            <h4>Potassium</h4>
+                            <h4 id="potassium">Potassium</h4>
                         </div>
                         <div class="column benefits">
                             <h3>What Does It Do?</h3>
@@ -1044,7 +1119,7 @@
                     <div class="row">
                         <div class="column name">
                             <h3>Name</h3>
-                            <h4>Calcium</h4>
+                            <h4 id="calcium">Calcium</h4>
                         </div>
                         <div class="column benefits">
                             <h3>What Does It Do?</h3>
@@ -1097,7 +1172,7 @@
                     <div class="row">
                         <div class="column name">
                             <h3>Name</h3>
-                            <h4>Phosphorus</h4>
+                            <h4 id="phosphorus">Phosphorus</h4>
                         </div>
                         <div class="column benefits">
                             <h3>What Does It Do?</h3>
@@ -1151,7 +1226,7 @@
                     <div class="row">
                         <div class="column name">
                             <h3>Name</h3>
-                            <h4>Magnesium</h4>
+                            <h4 id="magnesium">Magnesium</h4>
                         </div>
                         <div class="column benefits">
                             <h3>What Does It Do?</h3>
@@ -1204,7 +1279,7 @@
                     <div class="row">
                         <div class="column name">
                             <h3>Name</h3>
-                            <h4>Sulphur</h4>
+                            <h4 id="sulphur">Sulphur</h4>
                         </div>
                         <div class="column benefits">
                             <h3>What Does It Do?</h3>
@@ -1252,11 +1327,11 @@
                         </div>
                     </div> 
                     <p></p>
-                    <h3>Micro-Minerals</h3>
+                    <h3 id="micro-minerals">Micro-Minerals</h3>
                     <div class="row">
                         <div class="column name">
                             <h3>Name</h3>
-                            <h4>Iron</h4>
+                            <h4 id="iron">Iron</h4>
                         </div>
                         <div class="column benefits">
                             <h3>What Does It Do?</h3>
@@ -1309,7 +1384,7 @@
                     <div class="row">
                         <div class="column name">
                             <h3>Name</h3>
-                            <h4>Zinc</h4>
+                            <h4 id="zinc">Zinc</h4>
                         </div>
                         <div class="column benefits">
                             <h3>What Does It Do?</h3>
@@ -1359,7 +1434,7 @@
                             Adequate Intake (AI) 11mg a day [1]</p>
                         </div>
                     </div>
-                    <h4>Iodine</h4>
+                    <h4 id="iodine">Iodine</h4>
                     <div class="row">
                         <div class="column name">
                             <h3>Name</h3>
@@ -1416,7 +1491,7 @@
                     <div class="row">
                         <div class="column name">
                             <h3>Name</h3>
-                            <h4>Selenium</h4>
+                            <h4 id="selenium">Selenium</h4>
                         </div>
                         <div class="column benefits">
                             <h3>What Does It Do?</h3>
@@ -1470,7 +1545,7 @@
                     <div class="row">
                         <div class="column name">
                             <h3>Name</h3>
-                            <h4>Copper</h4>
+                            <h4 id="copper">Copper</h4>
                         </div>
                         <div class="column benefits">
                             <h3>What Does It Do?</h3>
@@ -1523,7 +1598,7 @@
                     <div class="row">
                         <div class="column name">
                             <h3>Name</h3>
-                            <h4>Manganese</h4>
+                            <h4 id="manganese">Manganese</h4>
                         </div>
                         <div class="column benefits">
                             <h3>What Does It Do?</h3>
@@ -1576,7 +1651,7 @@
                     <div class="row">
                         <div class="column name">
                             <h3>Name</h3>
-                            <h4>Fluoride</h4>
+                            <h4 id="fluoride">Fluoride</h4>
                         </div>
                         <div class="column benefits">
                             <h3>What Does It Do?</h3>
@@ -1632,7 +1707,7 @@
                     <div class="row">
                         <div class="column name">
                             <h3>Name</h3>
-                            <h4>Chromium</h4>
+                            <h4 id="chromium">Chromium</h4>
                         </div>
                         <div class="column benefits">
                             <h3>What Does It Do?</h3>
@@ -1685,7 +1760,7 @@
                     <div class="row">
                         <div class="column name">
                             <h3>Name</h3>
-                            <h4>Molybdenum</h4>
+                            <h4 id="molybdenum">Molybdenum</h4>
                         </div>
                         <div class="column benefits">
                             <h3>What Does It Do?</h3>
@@ -1758,5 +1833,20 @@
             </a>
         </nav>
     </footer>
+    <script>
+        const tocToggle = document.querySelector('.toc-toggle');
+        const tocMenu = document.getElementById('tocMenu');
+
+        tocToggle.addEventListener('click', () => {
+            tocMenu.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('.toc-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                tocMenu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
