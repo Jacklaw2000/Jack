@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nutrient Rich Foods Foods</title>
-    <link rel="stylesheet" href="styles/style-nutritious-foods.css">
+    <link rel="stylesheet" href="../styles/style-nutritious-foods.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 </head>
 <body>
@@ -1826,7 +1826,7 @@
             <a href="https://jacklaw2000.github.io/Jack/" class="btn">
                 <i class="fa fa-home"></i> Home
             </a>
-            <a href="recipes.html" class="btn">
+            <a href="../recipes.html" class="btn">
                 <i class="fa fa-book"></i> Recipe Book
             </a>
         </nav>
@@ -1883,7 +1883,15 @@
             const h4 = row.querySelector('.column.name h4');
             if (!h4) return;
             const id = h4.id;
-            const csvUrl = id + '.csv';
+            let folder;
+            if (id === 'protein' || id === 'carbohydrate' || id === 'fats') {
+                folder = 'macronutrients';
+            } else if (id.includes('-b') || id.startsWith('vitamin-')) {
+                folder = 'vitamins';
+            } else {
+                folder = 'minerals';
+            }
+            const csvUrl = folder + '/' + id + '.csv';
             loadCSV(csvUrl).then(data => {
                 populateTable(horizontalRow, data);
             });
