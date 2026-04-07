@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nutrient Rich Foods Foods</title>
     <link rel="stylesheet" href="styles/style-nutritious-foods.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 </head>
 <body>
     <!-- Collapsible Table of Contents -->
@@ -1842,6 +1843,49 @@
         document.querySelectorAll('.toc-menu a').forEach(link => {
             link.addEventListener('click', () => {
                 tocMenu.classList.remove('active');
+            });
+        });
+
+        // Load nutrient tables from CSVs
+        function loadCSV(url) {
+            return fetch(url)
+                .then(response => response.text())
+                .then(data => Papa.parse(data, { header: true }).data);
+        }
+
+        function populateTable(horizontalRow, data) {
+            const foodCol = horizontalRow.querySelector('.column.food');
+            const intakeCol = horizontalRow.querySelector('.column.intake');
+            const caloriesCol = horizontalRow.querySelector('.column.calories');
+
+            // Clear existing p tags
+            foodCol.innerHTML = '<h3>Food Sources</h3>';
+            intakeCol.innerHTML = '<h3>Intake Per 100g</h3>';
+            caloriesCol.innerHTML = '<h3>Calories Per 100g</h3>';
+
+            data.forEach(row => {
+                const foodP = document.createElement('p');
+                foodP.textContent = row.Food;
+                foodCol.appendChild(foodP);
+
+                const intakeP = document.createElement('p');
+                intakeP.textContent = row['Intake Per 100g'];
+                intakeCol.appendChild(intakeP);
+
+                const caloriesP = document.createElement('p');
+                caloriesP.textContent = row['Calories Per 100g'];
+                caloriesCol.appendChild(caloriesP);
+            });
+        }
+
+        document.querySelectorAll('.horizontal-row').forEach(horizontalRow => {
+            const row = horizontalRow.closest('.row');
+            const h4 = row.querySelector('.column.name h4');
+            if (!h4) return;
+            const id = h4.id;
+            const csvUrl = id + '.csv';
+            loadCSV(csvUrl).then(data => {
+                populateTable(horizontalRow, data);
             });
         });
     </script>

@@ -1,0 +1,22 @@
+Nutrient,Food,Intake Per 100g,Calories Per 100g
+Protein,Meat,35,140
+Protein,Fish,25,120
+Protein,Eggs,30,100
+Protein,Dairy,12,90
+Protein,Legumes,6,60
+Protein,Nuts,15,70
+Protein,Seeds,8,50
+Carbohydrate,Whole grains,35,140
+Carbohydrate,Fruits,25,120
+Carbohydrate,Vegetables,30,100
+Carbohydrate,Sugary drinks,12,90
+Carbohydrate,Starchy vegetables,6,60
+Carbohydrate,Whole fruits,15,70
+Carbohydrate,Legumes,8,50
+Fats,Monounsaturated fats,35,140
+Fats,Polyunsaturated fats,25,120
+Fats,Saturated fats,30,100
+Fats,Lard,12,90
+Fats,Yoghurt,6,60
+Fats,Houmous,15,70
+Fats,Butter,8,50
