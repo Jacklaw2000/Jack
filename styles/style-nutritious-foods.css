@@ -97,13 +97,13 @@ nav {
     float: left; /* Allow columns to float next to each other */
     }
 
-.name { width: 10%; text-align: center; }
-.benefits { width: 90%; text-align: center; }
+.name { width: 100%; text-align: center; }
+.benefits { width: 100%; text-align: center; }
 .food { width: 30%; text-align: center; }
 .intake { width: 30%; text-align: center; }
 .calories { width: 30%; text-align: center; }
-.ri { width: 20%; text-align: center; }
-.notes { width: 80%; text-align: center; }
+.ri { width: 100%; text-align: center; }
+.notes { width: 100%; text-align: center; }
 
 /* Clear floats after the columns */
 .row:after {
