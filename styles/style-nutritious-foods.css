@@ -121,13 +121,11 @@ nav {
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: flex-start;
-    width: 30%;
+    width: 100%;
 }
 
 .horizontal-row .horizontal {
     float: none;
-    width: 33.333%;
-    max-width: 33.333%;
 }
 
 /* Responsive layout - makes the three columns stay side-by-side on phone */
@@ -136,7 +134,6 @@ nav {
         width: 100%;
     }
     .horizontal-row {
-        width: 100%;
         flex-wrap: nowrap;
     }
     .horizontal-row .horizontal {

@@ -1,8 +1,10 @@
 Food,Intake Per 100g,Calories Per 100g
-Monounsaturated fats,35,140
-Polyunsaturated fats,25,120
-Saturated fats,30,100
-Lard,12,90
+Red Meat,35,140
+Poultry,25,120
+Fish,30,100
+Milk,12,90
 Yoghurt,6,60
-Houmous,15,70
-Butter,8,50
+Cheese,15,70
+Eggs,8,50
+Bread,4,30
+Wholegrains,5,40
