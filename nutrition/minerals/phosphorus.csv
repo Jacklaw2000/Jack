@@ -1,10 +1,10 @@
-Food,Intake Per 100g,Calories Per 100g
-Red Meat,35,140
-Poultry,25,120
-Fish,30,100
-Milk,12,90
-Yoghurt,6,60
-Cheese,15,70
-Eggs,8,50
-Bread,4,30
-Wholegrains,5,40
+Food,Intake Per 100g,Calories Per 100g,Recommended Intake Per Day
+Red Meat,35,140,0.55g
+Poultry,25,120,0.55g
+Fish,30,100,0.55g
+Milk,12,90,0.55g
+Yoghurt,6,60,0.55g
+Cheese,15,70,0.55g
+Eggs,8,50,0.55g
+Bread,4,30,0.55g
+Wholegrains,5,40,0.55g

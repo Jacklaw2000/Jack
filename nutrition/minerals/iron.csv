@@ -1,8 +1,8 @@
-Food,Intake Per 100g,Calories Per 100g
-Red Meat,35,140
-Beans,25,120
-Pulses,30,100
-Wholemeal Bread,12,90
-Quinoa,6,60
-Nuts,15,70
-Seeds,8,50
+Food,Intake Per 100g,Calories Per 100g,Recommended Intake Per Day
+Red Meat,35,140,0.0087g
+Beans,25,120,0.0087g
+Pulses,30,100,0.0087g
+Wholemeal Bread,12,90,0.0087g
+Quinoa,6,60,0.0087g
+Nuts,15,70,0.0087g
+Seeds,8,50,0.0087g

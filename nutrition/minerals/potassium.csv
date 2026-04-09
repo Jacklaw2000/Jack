@@ -1,12 +1,12 @@
-Food,Intake Per 100g,Calories Per 100g
-Banana,35,140
-Blackcurrants,25,120
-Avocado,30,100
-Spinach,12,90
-Parsnip,6,60
-Beetroot,15,70
-Poultry,8,50
-Red Meat,10,80
-Fish,12,90
-Milk,10,50
-Wholegrain Breakfast Cereals,20,150
+Food,Intake Per 100g,Calories Per 100g,Recommended Intake Per Day
+Banana,35,140,3.5g
+Blackcurrants,25,120,3.5g
+Avocado,30,100,3.5g
+Spinach,12,90,3.5g
+Parsnip,6,60,3.5g
+Beetroot,15,70,3.5g
+Poultry,8,50,3.5g
+Red Meat,10,80,3.5g
+Fish,12,90,3.5g
+Milk,10,50,3.5g
+Wholegrain Breakfast Cereals,20,150,3.5g

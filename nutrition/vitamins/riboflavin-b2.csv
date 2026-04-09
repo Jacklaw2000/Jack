@@ -1,8 +1,8 @@
-Food,Intake Per 100g,Calories Per 100g
-Milk,35,140
-Eggs,25,120
-Fortified Breakfast Cereals,30,100
-Mackerel,12,90
-Sardines,6,60
-Mushrooms,15,70
-Almonds,8,50
+Food,Intake Per 100g,Calories Per 100g,Recommended Intake Per Day
+Milk,35,140,0.0013g
+Eggs,25,120,0.0013g
+Fortified Breakfast Cereals,30,100,0.0013g
+Mackerel,12,90,0.0013g
+Sardines,6,60,0.0013g
+Mushrooms,15,70,0.0013g
+Almonds,8,50,0.0013g

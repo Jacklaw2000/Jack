@@ -1,7 +1,7 @@
-Food,Intake Per 100g,Calories Per 100g
-Milk,35,140
-Yoghurt,25,120
-Cheese,30,100
-Eggs,12,90
-Fish,6,60
-Fortified Dairy Alternatives,15,70
+Food,Intake Per 100g,Calories Per 100g,Recommended Intake Per Day
+Milk,35,140,0.00014g
+Yoghurt,25,120,0.00014g
+Cheese,30,100,0.00014g
+Eggs,12,90,0.00014g
+Fish,6,60,0.00014g
+Fortified Dairy Alternatives,15,70,0.00014g

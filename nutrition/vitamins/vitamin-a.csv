@@ -1,8 +1,8 @@
-Food,Intake Per 100g,Calories Per 100g
-Cheese,35,140
-Dark Leafy Greens,25,120
-Carrot,30,100
-Liver,12,90
-Yoghurt,6,60
-Sweet Potato,15,70
-Eggs,8,50
+Food,Intake Per 100g,Calories Per 100g,Recommended Intake Per 100g
+Cheese,35,140,0.0007g
+Dark Leafy Greens,25,120,0.0007g
+Carrot,30,100,0.0007g
+Liver,12,90,0.0007g
+Yoghurt,6,60,0.0007g
+Sweet Potato,15,70,0.0007g
+Eggs,8,50,0.0007g

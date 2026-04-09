@@ -1,8 +1,8 @@
-Food,Intake Per 100g,Calories Per 100g
-Brazil Nuts,35,140
-Sunflower Seeds,25,120
-Wholegrain Breakfast Cereals,30,100
-Wholegrain Bread,12,90
-Brown Rice,6,60
-Quinoa,15,70
-Seeded Bread,8,50
+Food,Intake Per 100g,Calories Per 100g,Recommended Intake Per Day
+Brazil Nuts,35,140,0.3g
+Sunflower Seeds,25,120,0.3g
+Wholegrain Breakfast Cereals,30,100,0.3g
+Wholegrain Bread,12,90,0.3g
+Brown Rice,6,60,0.3g
+Quinoa,15,70,0.3g
+Seeded Bread,8,50,0.3g

@@ -1,8 +1,8 @@
-Food,Intake Per 100g,Calories Per 100g
-Milk,35,140
-Cheese,25,120
-Yogurt,30,100
-Fromage Frais,12,90
-Kale,6,60
-Bread,15,70
-Calcium-Fortified Dairy Alternatives,8,50
+Food,Intake Per 100g,Calories Per 100g,Recommended Intake Per Day
+Milk,35,140,0.7g
+Cheese,25,120,0.7g
+Yogurt,30,100,0.7g
+Fromage Frais,12,90,0.7g
+Kale,6,60,0.7g
+Bread,15,70,0.7g
+Calcium-Fortified Dairy Alternatives,8,50,0.7g

@@ -1,8 +1,8 @@
-Food,Intake Per 100g,Calories Per 100g
-Citrus Fruits,35,140
-Strawberries,25,120
-Blackcurrants,30,100
-Green Vegetables,12,90
-Peppers,6,60
-Tomatoes,15,70
-Papaya,8,50
+Food,Intake Per 100g,Calories Per 100g,Recommended Intake Per Day
+Citrus Fruits,35,140,0.04g
+Strawberries,25,120,0.04g
+Blackcurrants,30,100,0.04g
+Green Vegetables,12,90,0.04g
+Peppers,6,60,0.04g
+Tomatoes,15,70,0.04g
+Papaya,8,50,0.04g

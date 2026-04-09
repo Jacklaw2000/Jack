@@ -1,8 +1,8 @@
-Food,Intake Per 100g,Calories Per 100g
-Monounsaturated fats,35,140
-Polyunsaturated fats,25,120
-Saturated fats,30,100
-Lard,12,90
-Yoghurt,6,60
-Houmous,15,70
-Butter,8,50
+Food,Intake Per 100g,Calories Per 100g,Recommended Intake Per Day
+Monounsaturated fats,35,140,0.005g
+Polyunsaturated fats,25,120,0.005g
+Saturated fats,30,100,0.005g
+Lard,12,90,0.005g
+Yoghurt,6,60,0.005g
+Houmous,15,70,0.005g
+Butter,8,50,0.005g

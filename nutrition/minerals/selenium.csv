@@ -1,8 +1,8 @@
-Food,Intake Per 100g,Calories Per 100g
-Brazil Nuts,35,140
-Cashew Nuts,25,120
-Sunflower Seeds,30,100
-Eggs,12,90
-Poultry,6,60
-Fish,15,70
-Offal,8,50
+Food,Intake Per 100g,Calories Per 100g,Recommended Intake Per Day
+Brazil Nuts,35,140,0.000075g
+Cashew Nuts,25,120,0.000075g
+Sunflower Seeds,30,100,0.000075g
+Eggs,12,90,0.000075g
+Poultry,6,60,0.000075g
+Fish,15,70,0.000075g
+Offal,8,50,0.000075g

@@ -1,8 +1,8 @@
-Food,Intake Per 100g,Calories Per 100g
-Meat,35,140
-Fish,25,120
-Poultry,30,100
-Wholegrains,12,90
-Bread,6,60
-Nuts,15,70
-Seeds,8,50
+Food,Intake Per 100g,Calories Per 100g,Recommended Intake Per Day
+Meat,35,140,0.00165g
+Fish,25,120,0.00165g
+Poultry,30,100,0.00165g
+Wholegrains,12,90,0.00165g
+Bread,6,60,0.00165g
+Nuts,15,70,0.00165g
+Seeds,8,50,0.00165g

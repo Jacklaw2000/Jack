@@ -1,8 +1,8 @@
-Food,Intake Per 100g,Calories Per 100g
-Meat,35,140
-Poultry,25,120
-Cheese,30,100
-Pine Nuts,12,90
-Pumpkin Seeds,6,60
-Wholegrain Breakfast Cereals,15,70
-Seeded Bread,8,50
+Food,Intake Per 100g,Calories Per 100g,Recommended Intake Per Day
+Meat,35,140,0.0075g
+Poultry,25,120,0.0075g
+Cheese,30,100,0.0075g
+Pine Nuts,12,90,0.0075g
+Pumpkin Seeds,6,60,0.0075g
+Wholegrain Breakfast Cereals,15,70,0.0075g
+Seeded Bread,8,50,0.0075g

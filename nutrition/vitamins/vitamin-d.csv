@@ -1,6 +1,6 @@
-Food,Intake Per 100g,Calories Per 100g
-Oily Fish,35,140
-Eggs,25,120
-Fortified Breakfast Cereals,30,100
-Fat Spreads,12,90
-The Sun,5,0
+Food,Intake Per 100g,Calories Per 100g,Recommended Intake Per Day
+Oily Fish,35,140,0.00002g
+Eggs,25,120,0.00002g
+Fortified Breakfast Cereals,30,100,0.00002g
+Fat Spreads,12,90,0.00002g
+The Sun,5,0,0.00002g

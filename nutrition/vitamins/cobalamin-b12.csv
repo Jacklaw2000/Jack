@@ -1,8 +1,8 @@
-Food,Intake Per 100g,Calories Per 100g
-Meat,35,140
-Fish,25,120
-Milk,30,100
-Cheese,12,90
-Eggs,6,60
-Fortified Breakfast Cereals,15,70
-Fromage Frais,8,50
+Food,Intake Per 100g,Calories Per 100g,Recommended Intake Per Day
+Meat,35,140,0.0000015g
+Fish,25,120,0.0000015g
+Milk,30,100,0.0000015g
+Cheese,12,90,0.0000015g
+Eggs,6,60,0.0000015g
+Fortified Breakfast Cereals,15,70,0.0000015g
+Fromage Frais,8,50,0.0000015g

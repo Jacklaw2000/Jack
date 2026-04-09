@@ -1,8 +1,24 @@
-Food,Intake Per 100g,Calories Per 100g
-Bread,35,140
-Fortified Breakfast Cereals,25,120
-Nuts,30,100
-Seeds,12,90
-Pork,6,60
-Beans,15,70
-Peas,8,50
+Food,Intake Per 100g,Calories Per 100g,Recommended Intake Per Day
+Bread,0.0002,265,0.001g
+Bran Flakes,0.0009,340,0.001g
+Macadamia Nuts,0.0012,718,0.001g
+Pine Nuts,0.0012,673,0.001g
+Pistachios,0.0009,562,0.001g
+Pecans, 0.00064, 690,0.001g
+Brazil Nuts,0.00062,656,0.001g
+Peanuts,0.0006,567,0.001g
+Hazelnuts,0.00045,628,0.001g
+Cashews,0.00042,600,0.001g
+Walnuts,0.00034,654,0.001g
+Sunflower Seeds,0.0015,584,0.001g
+Flax Seeds,0.00164,534,0.001g
+Sesame Seeds,0.00079,573,0.001g
+Chia Seeds,0.00062,486,0.001g
+Lean Pork,0.0007,135,0.001g
+Lupin Beans,0.0007,371,0.001g
+White Beans,0.0005,333,0.001g
+Black Beans,0.0002,341,0.001g
+Mung Beans,0.0006,347,0.001g
+Red Beans,0.0001,333,0.001g
+Peas,0.0003,81,0.001g
+Asparagus,0.00014,20,0.001g

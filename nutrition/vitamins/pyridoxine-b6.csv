@@ -1,11 +1,11 @@
-Food,Intake Per 100g,Calories Per 100g
-Meat,35,140
-Fish,25,120
-Poultry,30,100
-Fortified Breakfast Cereals,12,90
-Egg yolk,6,60
-Soya Beans,15,70
-Sesame Seeds,8,50
-Banana,0.4,89
-Avocado,0.3,160
-Green Pepper,0.2,20
+Food,Intake Per 100g,Calories Per 100g,Recommended Intake Per Day
+Meat,35,140,0.0014g
+Fish,25,120,0.0014g
+Poultry,30,100,0.0014g
+Fortified Breakfast Cereals,12,90,0.0014g
+Egg yolk,6,60,0.0014g
+Soya Beans,15,70,0.0014g
+Sesame Seeds,8,50,0.0014g
+Banana,0.4,89,0.0014g
+Avocado,0.3,160,0.0014g
+Green Pepper,0.2,20,0.0014g

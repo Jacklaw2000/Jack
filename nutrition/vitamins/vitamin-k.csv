@@ -1,8 +1,8 @@
-Food,Intake Per 100g,Calories Per 100g
-Broccoli,35,140
-Spinach,25,120
-Kale,30,100
-Lettuce,12,90
-Green Beans,6,60
-Rapeseed Oil,15,70
-Olive Oil,8,50
+Food,Intake Per 100g,Calories Per 100g,Recommended Intake Per Day
+Broccoli,35,140,0.0001g
+Spinach,25,120,0.0001g
+Kale,30,100,0.0001g
+Lettuce,12,90,0.0001g
+Green Beans,6,60,0.0001g
+Rapeseed Oil,15,70,0.0001g
+Olive Oil,8,50,0.0001g
